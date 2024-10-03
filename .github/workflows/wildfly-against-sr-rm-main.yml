@@ -20,6 +20,8 @@ jobs:
         with: 
           path: wildfly
           fetch-depth: 0
+          # Needed to push in case there are changes to the workflows upstream, or we will fail when pushing below
+          token: ${{ secrets.UPDATE_WORKFLOW }}
           
 #      - name: Setup tmate session
 #        uses: mxschmitt/action-tmate@v3
